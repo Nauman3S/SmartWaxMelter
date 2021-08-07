@@ -68,7 +68,7 @@ End with an example of getting some data out of the system or using it for a lit
 ## 🔧 Circuit Diagram <a name = "tests"></a>
 
 Explain how to run the automated tests for this system.
-[![Circuit Diagram](Curcuit/Circuit_bb.png)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+![Circuit](Circuit/Circuit_bb.png)
 
 ### Break down into end to end tests
 
