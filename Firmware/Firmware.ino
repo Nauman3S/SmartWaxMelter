@@ -155,8 +155,10 @@ void setup()
 
     Serial.begin(115200);
     topicTempV = String("SmartWaxMelter") + getMacAddress() + String("temperature");
-    topicRelay = String("SmartWaxMelter") + getMacAddress() + String("relayStatus");
+    topicRelay = String("SmartWaxMelter") + getMacAddress() + String("relay");
     topicLEDStrip = String("SmartWaxMelter") + getMacAddress() + String("ledStrip");
+    Serial.print("Mac Address: ");
+    Serial.println(getMacAddress());
     setup_wifi();
 
     client.setServer(mqtt_server, 1883);

@@ -25,6 +25,7 @@
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Usage](#usage)
+- [Test](#test)
 - [Built Using](#built_using)
 - [Circuit](#circuit)
 - [Contributing](../CONTRIBUTING.md)
@@ -73,6 +74,7 @@ You should have Arduino IDE Installed
   4.  Select the correct port from Tools->Port
   5.  Then in Fimrware.ino file, on line number 12 and 13, put your WiFi creds
   6.  Upload the Code to your WEMOS Board
+  7.  Open the serial monitor on your Arduino IDE and press reset button on your Wemos Board. Then note down the Mac Address value.
 
   ```diff
   + broker used is borker.hivemq.com
@@ -85,29 +87,29 @@ You should have Arduino IDE Installed
 Complete Circuit Diagram of Sensor Node
 ![Circuit](Circuit/Circuit_bb.png)
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+[Will be updated]
+
+## Test <a name="test"></a>
+
+- Install MQTTLens which is a chrome extension from the link below
+- https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en
+- Now open MQTTLens, click on '+' button next to 'Connections' on top left corner
+- In connection name add 'HiveMQ', in hostname add 'broker.hivemq.com' and then scroll down and click 'CREATE CONNECTION'   button
+- Now in Subscribe section put ```SmartWaxMelter/MacAddress/temperature```(replace MacAddress with the MacAdress value noted down in WemosD1 Mini Fimrware section point 7) and click 'SUBSCRIBE' button next to it.
+- Restart your Wemos by pressing RST button on your Wemos
+- once done, you will see data comming from Wemos to MQTTLens and when you press the buzzer button, you will see the MQTTLens log will show the live temperature values.
+1. You can also control the relay or the RGB Led strip
+  1. In the publish section publish "on" or "off" to the topic ```SmartWaxMelter/MacAddress/relay```
+  2. Publish "r,g,b,brightness" replace r,g,b,brightness with the values from 1 to 255 for example "20,34,66,100" to the topic ```SmartWaxMelter/MacAddress/ledStrip```
+
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
 Add additional notes about how to deploy this on a live system.
+[will be updated]
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
