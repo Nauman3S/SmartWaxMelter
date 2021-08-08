@@ -102,8 +102,8 @@ Complete Circuit Diagram of Sensor Node
 - Restart your Wemos by pressing RST button on your Wemos
 - once done, you will see data comming from Wemos to MQTTLens and when you press the buzzer button, you will see the MQTTLens log will show the live temperature values.
 1. You can also control the relay or the RGB Led strip
-  1. In the publish section publish "on" or "off" to the topic ```SmartWaxMelter/MacAddress/relay```
-  2. Publish "r,g,b,brightness" replace r,g,b,brightness with the values from 1 to 255 for example "20,34,66,100" to the topic ```SmartWaxMelter/MacAddress/ledStrip```
+    1. In the publish section publish "on" or "off" to the topic ```SmartWaxMelter/MacAddress/relay```
+    2. Publish "r,g,b,brightness" replace r,g,b,brightness with the values from 1 to 255 for example "20,34,66,100" to the topic ```SmartWaxMelter/MacAddress/ledStrip```
 
 
 ## 🚀 Deployment <a name = "deployment"></a>
