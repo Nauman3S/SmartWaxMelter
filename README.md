@@ -15,7 +15,7 @@
 ---
 
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Automated SmartWaxMelter
     <br> 
 </p>
 
@@ -28,7 +28,6 @@
 - [Test](#test)
 - [Built Using](#built_using)
 - [Circuit](#circuit)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 
 
