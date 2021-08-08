@@ -33,7 +33,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This repo contains circuit, firmware and backend for SmartWaxMelter Project.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -44,26 +44,41 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them.
 
 ```
-Give examples
+- Arduino IDE
+- Ubuntu Server 20.04
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+A step by step series that tell you how to get the Firmware and Backend running
 
-Say what the step will be
+#### WemosD1 Mini Fimrware
 
-```
-Give the example
-```
+You should have Arduino IDE Installed
 
-And repeat
+  1.  Add ESP8266 Board to your Arduino IDE
+    1. In your Arduino IDE, go to File> Preferences
+        Installing ESP8266 Add-on in Arduino IDE Windows, Mac OS X, Linux open preferences
+    2. Enter ```http://arduino.esp8266.com/stable/package_esp8266com_index.json``` into the “Additional Board Manager URLs” field then, click the “OK” button:
+    Note: if you already have the ESP32 boards URL, you can separate the URLs with a comma as follows:
+    ```https://dl.espressif.com/dl/package_esp32_index.json,
+      http://arduino.esp8266.com/stable/package_esp8266com_index.json```
+    3. Open the Boards Manager. Go to Tools > Board > Boards Manager…
+    4. Search for ESP8266 and press install button for the ESP8266 by Espressif Systems“:
+    5. That’s it. It should be installed after a few seconds.
 
-```
-until finished
-```
+  2.  Now copy the contents of the libs folder to the libraries directory of your Arduino
+    1. If you are using windows, the libraries directory will be Documents/Arduino/libraries
+  3.  Select LOLIN(WEMOS) D1 R2 & mini from Tools->Board->ESP8266
+  4.  Select the correct port from Tools->Port
+  5.  Then in Fimrware.ino file, on line number 12 and 13, put your WiFi creds
+  6.  Upload the Code to your WEMOS Board
 
-End with an example of getting some data out of the system or using it for a little demo.
+  ```diff
+  + broker used is borker.hivemq.com
+  ```
+  Note: The topics are arranged as SmartWaxMelter/MacAddressOfBoard/temperature etc.
+
 
 ## 🔧 Circuit Diagram <a name = "circuit"></a>
 
