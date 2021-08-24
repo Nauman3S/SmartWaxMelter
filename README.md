@@ -84,7 +84,7 @@ You should have Arduino IDE Installed
 ## 🔧 Circuit Diagram <a name = "circuit"></a>
 
 Complete Circuit Diagram of Sensor Node
-![Circuit](Circuit/Circuit_bb.png)
+![Circuit](Circuit_bb.png)
 
 
 ## 🎈 Usage <a name="usage"></a>
